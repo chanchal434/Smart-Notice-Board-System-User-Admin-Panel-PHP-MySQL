@@ -1,0 +1,155 @@
+/* admin_style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: #0056b3;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover { background-color: #004494; }
+.navbar a.logout { float: right; background-color: #dc3545; }
+
+/* --- Global Forms --- */
+form { display: flex; flex-direction: column; }
+
+/* --- Filter Bar (Horizontal Layout) --- */
+.filter-bar {
+    display: flex;
+    flex-direction: row; /* Forces items in a line */
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    align-items: flex-end; /* Aligns buttons with bottom of inputs */
+    margin-bottom: 25px;
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 5px; }
+
+label { font-weight: bold; font-size: 13px; color: #444; }
+
+/* Standardizing Input Height */
+input[type="text"], 
+input[type="password"], 
+select {
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 42px; /* Fixed height for all */
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't increase height */
+}
+
+/* --- Button & Reset Button Twin Styling --- */
+button, 
+input[type="submit"], 
+.reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px; /* Matches inputs exactly */
+    padding: 0 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* Apply Filter Button (Green) */
+button, input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    margin-top: 0; /* Removes any global form margins */
+}
+
+button:hover { background-color: #218838; }
+
+/* Reset Button (Grey) */
+.reset-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.reset-btn:hover { background-color: #5a6268; color: white; }
+
+/* --- Table Styling --- */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: #f2f2f2; color: #333; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
+tr:hover { background-color: #fcfcfc; }
+
+/* Delete Button in Table */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 7px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.delete-btn:hover { background-color: #a71d2a; }
+
+/* --- Pagination System --- */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn-page {
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-page:hover { background-color: #0056b3; }
+.spacer { flex: 1; }
+
+/* Success Messages */
+.msg { 
+    padding: 12px 15px; 
+    background: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+    border-radius: 4px; 
+    margin-bottom: 20px; 
+}
