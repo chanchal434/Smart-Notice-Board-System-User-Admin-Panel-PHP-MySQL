@@ -20,7 +20,7 @@ A **web-based Notice Board System** developed using **PHP, MySQL, HTML, CSS, and
 
 ### 👨‍🎓 User Panel
 
-* 📢 View Latest Notices (Grouped by Month)
+* 📢 View Latest Notices (Grouped by Month or Year)
 * 🔎 Filter by:
 
   * Type
@@ -38,7 +38,7 @@ A **web-based Notice Board System** developed using **PHP, MySQL, HTML, CSS, and
 Smart-Notice-Board-System/
 │
 ├── admin/
-│   ├── admin_index.php          # Admin Login
+│   ├── admin_index.php          # Admin Login and starting file
 │   ├── admin_dashboard.php      # Redirect to upload page :contentReference[oaicite:0]{index=0}
 │   ├── admin_file_upload.php    # Add Notice :contentReference[oaicite:1]{index=1}
 │   ├── admin_update_notice.php  # Update Notice :contentReference[oaicite:2]{index=2}
