@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `division` (
   `division_id` int(11) NOT NULL,
   `division_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 
 
@@ -50,7 +50,7 @@ CREATE TABLE `document` (
   `type_id` int(11) DEFAULT NULL,
   `custom_type` varchar(100) DEFAULT NULL,
   `division_description` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 
 --
@@ -74,8 +74,7 @@ CREATE TABLE `settings` (
 CREATE TABLE `type` (
   `type_id` int(11) NOT NULL,
   `type_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+);
 
 -- --------------------------------------------------------
 
@@ -87,7 +86,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 
 --
