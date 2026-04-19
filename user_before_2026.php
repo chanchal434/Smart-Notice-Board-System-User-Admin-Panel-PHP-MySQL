@@ -26,34 +26,9 @@ $whereClause = "WHERE YEAR(date) >= 2026";
 $params = [];
 $types = "";
 
-// Define the linked types for the user side (Robust Version)
-$equivalent_groups = [
-    ["ION", "अंत: कार्यालयीन सूचना"],
-    ["DO", "दैनिक आदेश"],
-    ["Circular", "परिपत्र"]
-];
 
-if (!empty($filterType)) {
-    $selected_type = trim($filterType);
-    $matched_group = null;
-    
-    foreach ($equivalent_groups as $group) {
-        if (in_array($selected_type, $group)) {
-            $matched_group = $group;
-            break;
-        }
-    }
 
-    if ($matched_group) {
-        $whereClause .= " AND custom_type IN (?, ?)";
-        array_push($params, $matched_group[0], $matched_group[1]);
-        $types .= "ss";
-    } else {
-        $whereClause .= " AND custom_type = ?";
-        $params[] = $selected_type;
-        $types .= "s";
-    }
-}
+
 
 if (!empty($filterKeyword)) {
     $whereClause .= " AND title LIKE ?";
@@ -175,16 +150,7 @@ if (!empty($filterYear)) {
             $noticeParams = [$currentYear, $currentMonth];
             $noticeTypes = "is";
 
-            if (!empty($filterType)) {
-                $selected_type_loop = trim($filterType);
-                $matched_group_loop = null;
-                
-                foreach ($equivalent_groups as $group) {
-                    if (in_array($selected_type_loop, $group)) {
-                        $matched_group_loop = $group;
-                        break;
-                    }
-                }
+           
                 
                 if ($matched_group_loop) {
                     $noticeSql .= " AND custom_type IN (?, ?)";
