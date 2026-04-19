@@ -84,25 +84,9 @@ if (!$has_filter) {
     $params = [$active_year];
     $types = "i";
 
-    // --- NEW FILTER FIX: Group English and Hindi equivalents (Robust Version) ---
-    if (!empty($_GET['filter_type'])) {
-        $selected_type = trim($_GET['filter_type']); // trim removes accidental spaces
-        
-        // Group the equivalents together
-        $equivalent_groups = [
-            ["ION", "अंत: कार्यालयीन सूचना"],
-            ["DO", "दैनिक आदेश"],
-            ["Circular", "परिपत्र"]
-        ];
+    
 
-        $matched_group = null;
-        foreach ($equivalent_groups as $group) {
-            // If the selected dropdown value is in this group, grab the whole group
-            if (in_array($selected_type, $group)) {
-                $matched_group = $group;
-                break;
-            }
-        }
+      
 
         if ($matched_group) {
             $where .= " AND (t.type_name IN (?, ?) OR d.custom_type IN (?, ?))";
