@@ -101,6 +101,9 @@ Smart-Notice-Board-System/
 * XAMPP / WAMP / LAMP Server
 * PHP ≥ 7.x
 * MySQL
+* HTML
+* CSS
+* JavaScript
 
 ---
 
