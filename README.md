@@ -62,7 +62,7 @@ Smart-Notice-Board-System/
 │   └── user_style.css           # User UI Styling :contentReference[oaicite:14]{index=14}
 │
 └── database/
-    └── notice_db.sql            # Database Structure (you create/import)
+    └── notice_db.sql            # Database Structure 
 ```
 
 ---
