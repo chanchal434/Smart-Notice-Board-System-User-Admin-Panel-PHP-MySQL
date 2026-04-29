@@ -4,7 +4,7 @@ require 'includes/admin_db.php';
 
 $msg = '';
 
-
+$tz = new DateTimeZone('Asia/Kolkata');
 $dt_current = new DateTime('now', $tz);
 $today_date = $dt_current->format('Y-m-d');
 
@@ -265,7 +265,9 @@ $divisions = $conn->query("SELECT * FROM division");
         <?php include 'includes/admin_header.php'; ?>
         <h2>Add New Notice</h2>
         <?php if($msg): ?> 
-            
+            <div class="msg" style="<?php echo strpos($msg, 'Error') !== false || strpos($msg, 'Failed') !== false ? 'background: #f8d7da; color: #721c24; border-color: #f5c6cb;' : ''; ?>">
+                <?php echo $msg; ?>
+            </div> 
         <?php endif; ?>
         
         <form method="POST" id="notice_form" enctype="multipart/form-data" onsubmit="showPreviewModal(event)">
