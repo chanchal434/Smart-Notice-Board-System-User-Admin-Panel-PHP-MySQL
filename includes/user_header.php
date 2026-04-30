@@ -8,5 +8,5 @@
 </head>
 <body>
     <div class="top-nav">
-        <h1>Notice Board</h1>
+        <h1>Advanced Notice Board</h1>
     </div>
