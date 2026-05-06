@@ -56,7 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div> 
         <?php endif; ?>
         
-       
+        <form method="POST" action="">
+            <label>Username</label>
+            <input type="text" name="username" required placeholder="Enter username">
+            
+            <label>Password</label>
             <input type="password" name="password" required placeholder="Enter password">
             
             <button type="submit" style="margin-top: 15px;">Login</button>
